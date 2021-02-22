@@ -12,6 +12,10 @@
   <a mat-button routerLink="/contactus" routerLinkActive="active">
     <fa-icon [icon]="faAddressCard" size="lg"></fa-icon> Contact
   </a>
+  <span class="flex-spacer"></span>
+  <a mat-button (click)="openLoginForm()">
+    <fa-icon [icon]="faSignIn" size="lg"></fa-icon> Login
+  </a>
 </mat-toolbar>
 
 <div

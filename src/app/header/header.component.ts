@@ -4,7 +4,10 @@ import {
   faInfo,
   faList,
   faAddressCard,
+  faSignInAlt,
 } from '@fortawesome/free-solid-svg-icons';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -16,8 +19,13 @@ export class HeaderComponent implements OnInit {
   faInfo = faInfo;
   faList = faList;
   faAddressCard = faAddressCard;
+  faSignIn = faSignInAlt;
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
+
+  openLoginForm() {
+    this.dialog.open(LoginComponent, { width: '500px', height: '450px' });
+  }
 }
