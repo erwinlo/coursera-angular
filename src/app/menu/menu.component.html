@@ -11,6 +11,7 @@
       <mat-grid-tile
         *ngFor="let dish of dishes"
         [routerLink]="['/dishdetail', dish.id]"
+        appHighlight
       >
         <img
           height="200px"
